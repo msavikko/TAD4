@@ -148,10 +148,10 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 
   // Sprite objects.
 
-  AsteroidsSprite   ship;
-  AsteroidsSprite   fwdThruster, revThruster;
-  AsteroidsSprite   ufo;
-  AsteroidsSprite   missle;
+  Ship   ship;
+  Thruster   fwdThruster, revThruster;
+  UFO   ufo;
+  Missle   missle;
   AsteroidsSprite[] photons    = new AsteroidsSprite[MAX_SHOTS];
   AsteroidsSprite[] asteroids  = new AsteroidsSprite[MAX_ROCKS];
   AsteroidsSprite[] explosions = new AsteroidsSprite[MAX_SCRAP];
@@ -337,7 +337,7 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 
   public void run() {
 	  
-	 GameSettings game = new GameSettings();
+	 GameSettings gameSettings = new GameSettings();
 
     int i, j;
     long startTime;
